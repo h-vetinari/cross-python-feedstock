@@ -21,9 +21,12 @@ requirements:
   run:
     - python ${{ version }}.* *_${{ py_impl }}
     - crossenv >=1.1.4
-    - rsync     # [unix]
-    - sed       # [unix]
-    - m2-sed    # [win]
+    - if: unix
+      then:
+        - rsync
+        - sed
+      else:
+        - m2-sed
     - if: cross_target_platform in ("osx-64", "osx-arm64")
       then: clangxx_impl_${{ cross_target_platform }}
       else: gxx_impl_${{ cross_target_platform }}
