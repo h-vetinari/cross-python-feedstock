@@ -42,7 +42,8 @@ tests:
         - echo ${{ freethreading }}
 
 about:
-  license: LicenseRef-OTHER
+  license: BSD-3-Clause
+  license_file: LICENSE.txt
   summary: A meta-package to set up a cross compiling env for python in conda-build
   homepage: https://github.com/conda-forge/cross-python-feedstock
 
