@@ -22,7 +22,6 @@ jobs:
         store_build_artifacts: true
         tools_install_dir: D:\Miniforge
         SHORT_CONFIG: win_64_cross_target_platformwin-arm64fre_h16440dd9
-    maxParallel: 2
   timeoutInMinutes: 360
   variables:
     UPLOAD_TEMP: D:\\tmp
