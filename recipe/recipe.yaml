@@ -11,9 +11,7 @@ build:
   number: ${{ build_number }}
   string: ${{ build_number }}_${{ py_impl }}
   skip:
-    - win and not (build_platform == "win-64" and cross_target_platform == "win-arm64" and version == "3.14")
-    - cross_target_platform == "win-arm64" and not (build_platform == "win-64" and version == "3.14")
-    - cross_target_platform == target_platform
+    - not (build_platform == "win-64" and cross_target_platform == "win-arm64" and version == "3.14")
 
 requirements:
   build:
